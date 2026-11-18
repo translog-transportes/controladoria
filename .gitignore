@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+storage/
+# Preferências pessoais do Claude Code (cada um tem as suas)
+CLAUDE.local.md
+.claude/settings.local.json
+# Pacotes de migração e cópias do banco contêm senhas e dados: nunca vão para o Git
+/migracao/
+*.zip
+*.sql.gz
+dump-*.sql
+CREDENCIAIS*.txt

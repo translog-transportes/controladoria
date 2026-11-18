@@ -1,0 +1,39 @@
+﻿ERP CONSTRUTORAS - COMO INSTALAR NO COMPUTADOR NOVO
+====================================================
+
+Este pacote tem o sistema completo, a cópia do banco de dados (todos os lançamentos,
+cadastros, obras, frota e locações), os anexos e a configuração.
+
+ANTES DE COMEÇAR (no computador novo)
+1. Instale o MySQL Community Server 8.4 LTS:
+   https://dev.mysql.com/downloads/mysql/  ->  "Windows (x86, 64-bit), MSI Installer"
+   - Instale com as opções padrão.
+   - No configurador, crie uma senha para o usuário "root" e ANOTE.
+   - Deixe marcado "Configure MySQL Server as a Windows Service".
+2. O Node.js o próprio instalador oferece instalar. Se preferir, instale antes a versão
+   LTS em https://nodejs.org
+
+INSTALAR
+1. Copie o arquivo .zip para o computador novo.
+2. Botão direito no .zip > "Extrair tudo...".
+3. Abra a pasta extraída e dê dois cliques em INSTALAR-NO-NOVO-PC.cmd
+   (se o Windows avisar "O Windows protegeu o computador", clique em "Mais informações" >
+   "Executar assim mesmo").
+4. Responda às perguntas:
+   - pasta de instalação (padrão C:\ERP-Construtoras);
+   - senha do root do MySQL que você criou no passo 1.
+5. No fim aparece o atalho "ERP Construtoras" na área de trabalho.
+   Entre com o mesmo e-mail e senha que você usava no computador antigo.
+
+DEPOIS DE INSTALAR
+- Confira algumas contas, obras e locações no computador novo.
+- Pare de usar o sistema no computador antigo (o que for lançado lá não passa para cá).
+- Apague o .zip e a pasta extraída: eles contêm as senhas do sistema.
+
+PROBLEMAS COMUNS
+- "Não conectou (senha errada?)": é a senha do root do MySQL DESTE computador.
+- "O banco já existe": o instalador só substitui se você digitar SUBSTITUIR.
+- A página não abre: veja se outro programa usa a porta 3000. Troque PORT=3000 no
+  arquivo .env da pasta do sistema (ex.: PORT=3010) e abra http://localhost:3010
+- Para gerar um pacote novo (ex.: no dia da troca, com os dados mais recentes), no
+  computador ANTIGO dê dois cliques em gerar-pacote-migracao.cmd, na pasta do sistema.
